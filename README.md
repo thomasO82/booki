@@ -1,7 +1,7 @@
-# Application XYZ
+# Application Booki
 
 ## Description
-Ceci est une application XYZ incroyablement utile qui fait des choses extraordinaires.
+Ceci est le code complet de l'application monobloc node js Booki
 
 ## Prérequis
 Assurez-vous d'avoir Node.js et npm installés sur votre machine.
