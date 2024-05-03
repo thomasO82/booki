@@ -17,7 +17,7 @@ Assurez-vous d'avoir Node.js et npm installés sur votre machine.
     ```bash
     npm install
 ## Utilisation
-Lancez le projet avec : 
+1. Lancez le projet avec : 
     ```bash
     node app.js
 
