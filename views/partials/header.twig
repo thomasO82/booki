@@ -1,0 +1,29 @@
+{# header.twig #}
+{% block style %}
+	<link rel="stylesheet" href="/assets/css/header.css">
+{% endblock %}
+<header>
+	<div>
+		<img src="/assets/images/logo.png" alt="logo">
+	</div>
+	<nav>
+		<ul>
+			{% if user %}
+				<li>
+					<a href="/addbook">Ajouter un livre</a>
+				</li>
+				<li>
+					<a href="/logout">connexion</a>
+				</li>
+			{% else %}
+				<li>
+					<a href="/subscribe">inscription</a>
+				</li>
+				<li>
+					<a href="/login">connexion</a>
+				</li>
+			{% endif %}
+
+		</ul>
+	</nav>
+</header>

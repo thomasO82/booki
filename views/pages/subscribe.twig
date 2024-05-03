@@ -1,0 +1,57 @@
+{# subscribe.twig #}
+
+{% extends "../layouts/base.twig" %}
+{% block style %}
+	<link rel="stylesheet" href="/assets/css/subscribe.css">
+{% endblock %}
+
+{% block title %}
+	<title>{{title}}</title>
+{% endblock %}
+
+{% block main %}
+	<main>
+		<section>
+			<div>
+				<h2>Formulaire d'inscription</h2>
+			</div>
+			<div>
+				<form action="./subscribe" method="post">
+					<div>
+						<label for="name">Votre nom</label>
+						<input id="name" type="text" name="name">
+						{% if error %}
+							<p>{{error.errors.name.message}}</p>
+						{% endif %}
+
+					</div>
+					<div>
+						<label for="firstname">Votre Prénom</label>
+						<input id="firstname" type="text" name="firstname">
+						{% if error %}
+							<p>{{error.errors.firstname.message}}</p>
+						{% endif %}
+					</div>
+
+					<div>
+						<label for="email">Votre E-mail</label>
+						<input id="email" type="text" name="email">
+						{% if error %}
+							<p>{{error.errors.email.message}}</p>
+						{% endif %}
+					</div>
+					<div>
+						<label for="password">Votre mot de passe</label>
+						<input id="password" type="password" name="password">
+						{% if error %}
+							<p>{{error.errors.password.message}}</p>
+						{% endif %}
+					</div>
+					<div>
+						<button>Envoyer</button>
+					</div>
+				</form>
+			</div>
+		</section>
+	</main>
+{% endblock %}

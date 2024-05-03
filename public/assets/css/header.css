@@ -1,0 +1,23 @@
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+header img {
+    width: 100px;
+
+}
+
+header nav ul {
+    padding: 0;
+    width: 100%;
+    gap: 30px;
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+}
+
+header nav a {
+    color: blue;
+    text-decoration: none;
+}

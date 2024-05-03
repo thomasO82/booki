@@ -1,0 +1,35 @@
+{# dashboard.twig #}
+
+{% extends "../layouts/base.twig" %}
+{% block style %}
+	<link rel="stylesheet" href="/assets/css/dashboard.css">
+{% endblock %}
+
+{% block title %}
+	<title>{{title}}</title>
+{% endblock %}
+
+{% block main %}
+	<main>
+		<section>
+			<div>
+				<h2>Dashboard</h2>
+			</div>
+			<div>
+				{% for book in user.bookCollection %}
+					<article>
+						<div>
+							<h3>{{book.title}}</h3>
+						</div>
+						<p>Ecrit par :{{book.author}}</p>
+						<p>paru le :{{book.publishedDate | date('d/m/Y')}}</p>
+						<div>
+							<a href="/bookupdate/{{book.id}}">Modifier le livre</a>
+							<a href="/bookdelete/{{book.id}}">Supprimer le livre</a>
+						</div>
+					</article>
+				{% endfor %}
+			</div>
+		</section>
+	</main>
+{% endblock %}
